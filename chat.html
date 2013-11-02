@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Chat</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    </head>
+    <body>
+        <h1>Chat</h1>
+        <div id="login">
+            <h2>Please login</h2>
+            Username: <input type="text" id="username"></input>&nbsp;<input type="button" value="login" id="loginButton"></input>
+        </div>
+        <div class="chat" id="chat">
+            <h2>Username: <span class="user" id="user"></span>&nbsp;<input type="button" value="change" id="usernameButton"></input></h2>
+            <h2>My Id: <span id="myId"></span></h2>
+            <div>
+                ID host:&nbsp;<input type="text" id="idHost"></input>&nbsp;<input type="button" value="connect" id="connect"></input>&nbsp;<input type="button" value="disconnect" id="disconnect"></input>
+            </div>
+            <div>
+                Status:&nbsp;<span id="status"></span>
+            </div>
+            <br/>
+            <div class="chatWindow" id="chatWindow">
+                <div class="chatText" id="chatText"></div>
+                <div class="chatInput">
+                    <input type="text" id="textSend"></input><input type="button" value="send" id="send"></input>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/chat.js"></script>
+        <script type="text/javascript" src="js/chat.ui.js"></script>
+        <script type="text/javascript" src="js/chat.ui.events.js"></script>
+        <script type="text/javascript" src="js/chat.ui.chatText.js"></script>
+        <script type="text/javascript" src="js/chat.ui.status.js"></script>
+        <script type="text/javascript" src="js/chat.model.js"></script>
+        <script type="text/javascript" src="js/chat.logic.js"></script>
+        <script type="text/javascript" src="js/chat.logic.peer.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
