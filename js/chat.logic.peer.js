@@ -5,7 +5,6 @@ chat.logic.peer = (function () {
     //PRIVATE AREA
     var users = {}, peer,
         conn = [],
-        KEY_PEERJS = 'bymx4jjq2949rudi',
 
         sendUserToRemote = function (conne) {
             var sendPackage = new chat.model.Package(chat.model.USER, [chat.ui.getUserName()]);
@@ -118,7 +117,7 @@ chat.logic.peer = (function () {
 
             //creation of the local peer, we use our personal key_code obtained in the registration in peerJs.com
             peer = new Peer({
-                key: KEY_PEERJS
+                key: chat.config.KEY_PEERJS
             });
 
             setPeerEvents();
